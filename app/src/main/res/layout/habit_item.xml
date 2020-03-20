@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="88dp">
+    <TextView
+            android:id="@+id/itemName"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:text="Пить воду"/>
+
+    <LinearLayout
+            android:id="@+id/itemInfo"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toBottomOf="@id/itemName">
+
+        <TextView
+                android:id="@+id/itemPriority"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp" android:layout_marginEnd="10dp"
+                android:text="Приоритет: Высокий"/>
+        <TextView
+                android:id="@+id/itemType"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp" android:layout_marginEnd="10dp"
+                android:text="Полезная"/>
+        <TextView
+                android:id="@+id/itemCount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp" android:layout_marginEnd="10dp"
+                android:text="4"/>
+        <TextView
+                android:id="@+id/itemPeriod"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Раз в 2 ч."/>
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/itemDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/itemInfo"
+            android:text="Все время забываю пить воду\r\nПоэтому я написал это."/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

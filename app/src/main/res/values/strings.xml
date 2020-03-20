@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Треккер привычек</string>
+    <string name="habit_header">Меню привычки</string>
+    <string name="habit_name_hint">Название привычки</string>
+    <string name="habit_description_hint">Описание привычки</string>
+    <string name="good_habit_text">Полезная привычка</string>
+    <string name="bad_habit_text">Вредная привычка</string>
+    <string name="repetition_number_hint">Количество повторений</string>
+    <string name="period_hint">Периодичность в часах</string>
+    <string name="save_button_text">Сохранить</string>
+    <string name="item_priority">Приоритет: %1$d</string>
+    <string name="as">\@string/habit_description_hint</string>
+</resources>

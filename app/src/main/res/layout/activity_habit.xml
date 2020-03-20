@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <EditText
+            android:id="@+id/habitNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/habit_name_hint"
+            android:importantForAutofill="no"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/habitDescription"/>
+
+    <EditText
+            android:id="@+id/habitDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:importantForAutofill="no"
+            android:hint="@string/habit_description_hint"
+            app:layout_constraintTop_toBottomOf="@id/habitNameText"/>
+
+    <Spinner
+            android:id="@+id/prioritySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/priority_array"
+            app:layout_constraintTop_toBottomOf="@id/habitDescription"/>
+
+
+    <RadioGroup
+            android:id="@+id/priorityTypeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/prioritySpinner">
+        <RadioButton
+                android:id="@+id/goodRadioButton"
+                android:text="@string/good_habit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <RadioButton
+                android:id="@+id/badRadioButton"
+                android:text="@string/bad_habit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </RadioGroup>
+
+    <EditText
+            android:id="@+id/repetitionNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/repetition_number_hint"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/priorityTypeGroup"/>
+
+    <EditText
+            android:id="@+id/periodNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/period_hint"
+            android:inputType="number"
+            android:importantForAutofill="no"
+            app:layout_constraintTop_toBottomOf="@id/repetitionNumber"/>
+
+    <Button
+            android:id="@+id/saveHabitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_button_text"
+            app:layout_constraintTop_toBottomOf="@+id/periodNumber"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
